@@ -1,0 +1,51 @@
+<html>
+<link rel="stylesheet" type="text/css" href="bill.css">
+<script src="bill.js"></script>
+<body>
+
+  <div class="o-container">
+    <div class="div3">
+<div class="col-5">
+            <h2 style="margin-left: 20px;">Payment</h2>
+            <label for="fname"style="margin-left: 20px;">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname" style="margin-left: 20px;">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            <label for="ccnum"style="margin-left: 20px;">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth"style="margin-left: 20px;">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+
+            <div class="row">
+              <div class="col-5">
+                <label for="expyear"style="margin-left: 20px;">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2018">
+              </div>
+              <div class="col-5">
+                <label for="cvv"style="margin-left: 20px;">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div>
+             </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+        <a href="kl.html"><input type="submit" onclick="otp()" value="processes"class="btn"> </a>
+          <a href="bill.html"><input type="button" value="BACK" style=" margin-left: 20px; height:50px;width:80px;background-color: black;color: white; font-size: 16px;font-family: arial;"></button></a>
+      </form>
+    </div>
+
+  </div>
+<script type="text/javascript">
+    function otp() {
+        fetch('http://localhost:1337/getsms').then((res) => console.log(res))
+    }
+</script>
+</body>
+</html>
