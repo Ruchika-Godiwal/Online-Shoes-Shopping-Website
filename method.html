@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body{
+    height: 100vh;
+    background: linear-gradient(
+        45deg,
+        black,
+        whitesmoke
+    );
+}
+.button {
+  border-radius: 4px;
+  background-color: white;
+  border:1px solid black;
+  color: black;
+  text-align:left;
+  font-size: 16px;
+  padding: 20px;
+  width: 520px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+  font-weight: bold;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.moh
+{
+  height:60%;
+  width: 40%;
+margin-left: 400px;
+background-color: whitesmoke;
+padding: 10px;
+border-radius: 8px;
+ box-shadow: 20px 20px 30px rgba(0,0,0,0.15);
+}
+.uil{
+  height: 18px;
+  width: 50px;
+  margin-left: 350px;
+}
+.ui{
+  height:25px;
+  width: 150px;
+  margin-left: 170px;
+}
+.ul{
+  height:12px;
+  width: 40px;
+  margin-left: 300px;
+
+}
+
+</style>
+</head>
+<body>
+  <br><br>
+  <br><br><br><br>
+ 
+<div class="moh">
+<br>
+
+<h2 style="font-family:Lucida Sans;">PAYMENT METHOD</h2>
+<p style="font-size:12px;font-family: sans-serif;"><i> All Transaction are safe and secure.</i></p>
+
+<a href="upi.html"><button class="button"><span> UPI </span>
+<img src="upi.png" class="uil">
+</button></a><br>
+<a href="bill.html"><button class="button"><span>CREDIT CARD </span>
+<img src="rul.jpeg" class="ui">
+</button></a><br>
+<button class="button"><span>CASH ON DELIVERY </span> 
+</button><br>
+
+</div>
+
+</body>
+</html>
