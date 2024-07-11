@@ -1,0 +1,88 @@
+
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Awesome CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>OTP Field Form - Coding Torque</title>
+    <style type="text/css">
+        body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #282a36;
+  height: 100vh;
+  color: #fff;
+}
+
+.otp-field {
+  display: flex;
+}
+
+.otp-field input {
+  width: 24px;
+  font-size: 32px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 2px;
+  border: 2px solid #55525c;
+  background: #21232d;
+  font-weight: bold;
+  color: #fff;
+  outline: none;
+  transition: all 0.1s;
+}
+
+.otp-field input:focus {
+  border: 2px solid #a527ff;
+  box-shadow: 0 0 2px 2px #a527ff6a;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.space {
+  margin-right: 1rem !important;
+}
+    </style>
+</head>
+
+
+<body>
+<p>OTP sent on ....12@gmail.com</p>
+<h1>Enter OTP</h1>
+<div class="otp-field">
+    <input type="text" maxlength="1" />
+    <input type="text" maxlength="1" />
+    <input class="space" type="text" maxlength="1" />
+    <input type="text" maxlength="1" />
+    <input type="text" maxlength="1" />
+    <input type="text" maxlength="1" />
+</div>
+  <div class="mt-4"><a href="thank.html"> <button class="btn btn-danger px-4 validate" onclick="validate()">Validate</button> </a>
+         </div> 
+
+    <script type="text/javascript">
+    function validate() {
+        fetch('http://localhost:1337/validatesms/').then((res) => console.log(res))
+    }
+</script>
+
+</body>
+
+</html>
